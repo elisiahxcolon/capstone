@@ -1,0 +1,104 @@
+[
+    {
+        "fullName": "rex joe",
+        "reason": "education.",
+        "timestamp": "2025-12-02T02:06:28.559Z",
+        "ipconfig": {
+            "ipv4": "10.118.90.5(Preferred) ",
+            "gateway": "10.118.0.1",
+            "dns": "10.9.32.4",
+            "mac": "C2-BF-BE-D7-D8-D3",
+            "dhcp": "Yes"
+        }
+    },
+    {
+        "fullName": "Harry Potter",
+        "reason": "I need info to DDos the muggles!",
+        "timestamp": "2025-12-05T18:54:25.362Z",
+        "ipconfig": {
+            "ipv4": "10.118.90.5(Preferred) ",
+            "gateway": "10.118.0.1",
+            "dns": "10.9.32.4",
+            "mac": "C2-BF-BE-D7-D8-D3",
+            "dhcp": "Yes"
+        }
+    },
+    {
+        "fullName": "Stan Smith",
+        "reason": "Learning for three letter.",
+        "timestamp": "2025-12-05T19:14:20.989Z",
+        "ipconfig": {
+            "ipv4": "10.118.90.5(Preferred) ",
+            "gateway": "10.118.0.1",
+            "dns": "10.9.32.4",
+            "mac": "C2-BF-BE-D7-D8-D3",
+            "dhcp": "Yes"
+        }
+    },
+    {
+        "fullName": "bob joe",
+        "reason": "cool stuff",
+        "timestamp": "2025-12-05T19:15:43.955Z",
+        "deviceInfo": {
+            "hostname": "LAPTOP-TVB6GAB1",
+            "osPlatform": "win32",
+            "adapter": "Local Area Connection* 1"
+        },
+        "ipconfig": {
+            "ipv4": "10.118.90.5(Preferred) ",
+            "gateway": "10.118.0.1",
+            "subnet": "255.255.0.0",
+            "dnsSuffix": "american.edu",
+            "dnsServers": [
+                "10.9.32.4"
+            ],
+            "mac": "C2-BF-BE-D7-D8-D3",
+            "dhcpEnabled": "Yes",
+            "dhcpServer": "10.9.8.4",
+            "leaseObtained": "Friday, December 5, 2025 1:32:40 PM",
+            "leaseExpires": "Saturday, December 6, 2025 1:31:55 PM"
+        },
+        "networkInterfaces": {
+            "Wi-Fi": [
+                {
+                    "address": "fe80::6b32:dbdf:5657:8772",
+                    "netmask": "ffff:ffff:ffff:ffff::",
+                    "family": "IPv6",
+                    "mac": "c0:bf:be:d7:d8:d3",
+                    "internal": false,
+                    "cidr": "fe80::6b32:dbdf:5657:8772/64",
+                    "scopeid": 3
+                },
+                {
+                    "address": "10.118.90.5",
+                    "netmask": "255.255.0.0",
+                    "family": "IPv4",
+                    "mac": "c0:bf:be:d7:d8:d3",
+                    "internal": false,
+                    "cidr": "10.118.90.5/16"
+                }
+            ],
+            "Loopback Pseudo-Interface 1": [
+                {
+                    "address": "::1",
+                    "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+                    "family": "IPv6",
+                    "mac": "00:00:00:00:00:00",
+                    "internal": true,
+                    "cidr": "::1/128",
+                    "scopeid": 0
+                },
+                {
+                    "address": "127.0.0.1",
+                    "netmask": "255.0.0.0",
+                    "family": "IPv4",
+                    "mac": "00:00:00:00:00:00",
+                    "internal": true,
+                    "cidr": "127.0.0.1/8"
+                }
+            ]
+        },
+        "arpTable": "\r\nInterface: 10.118.90.5 --- 0x3\r\n  Internet Address      Physical Address      Type\r\n  10.118.0.1            d4-78-9b-78-0e-4c     dynamic   \r\n  10.118.255.255        ff-ff-ff-ff-ff-ff     static    \r\n  224.0.0.2             01-00-5e-00-00-02     static    \r\n  224.0.0.251           01-00-5e-00-00-fb     static    \r\n  224.0.0.252           01-00-5e-00-00-fc     static    \r\n  239.255.255.250       01-00-5e-7f-ff-fa     static    \r\n  255.255.255.255       ff-ff-ff-ff-ff-ff     static    \r\n",
+        "openPorts": "\r\nActive Connections\r\n\r\n  Proto  Local Address          Foreign Address        State           PID\r\n  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       1232\r\n  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4\r\n  TCP    0.0.0.0:3000           0.0.0.0:0              LISTENING       19304\r\n  TCP    0.0.0.0:5040           0.0.0.0:0              LISTENING       940\r\n  TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING       584\r\n  TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING       904\r\n  TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING       2268\r\n  TCP    0.0.0.0:49667          0.0.0.0:0              LISTENING       2704\r\n  TCP    0.0.0.0:49668          0.0.0.0:0              LISTENING       3796\r\n  TCP    0.0.0.0:49669          0.0.0.0:0              LISTENING       536\r\n  TCP    10.118.90.5:139        0.0.0.0:0              LISTENING       4\r\n  TCP    10.118.90.5:50179      172.64.155.209:443     ESTABLISHED     4684\r\n  TCP    10.118.90.5:50180      104.18.32.47:443       ESTABLISHED     4684\r\n  TCP    10.118.90.5:50260      13.91.62.179:443       ESTABLISHED     8920\r\n  TCP    10.118.90.5:50521      172.202.211.172:443    ESTABLISHED     9780\r\n  TCP    10.118.90.5:50522      52.112.23.163:443      ESTABLISHED     6212\r\n  TCP    10.118.90.5:50529      172.183.7.194:443      ESTABLISHED     14268\r\n  TCP    10.118.90.5:50559      172.183.7.194:443      ESTABLISHED     4620\r\n  TCP    10.118.90.5:50565      216.24.57.250:443      ESTABLISHED     4684\r\n  TCP    10.118.90.5:54210      52.96.40.242:443       ESTABLISHED     21884\r\n  TCP    10.118.90.5:55394      52.123.190.162:443     ESTABLISHED     8920\r\n  TCP    10.118.90.5:60778      172.64.148.235:443     ESTABLISHED     4684\r\n  TCP    10.118.90.5:60779      52.168.112.66:443      TIME_WAIT       0\r\n  TCP    10.118.90.5:60781      107.167.96.30:443      CLOSE_WAIT      4684\r\n  TCP    10.118.90.5:60782      20.42.73.25:443        ESTABLISHED     3916\r\n  TCP    10.118.90.5:60799      140.82.112.26:443      ESTABLISHED     4684\r\n  TCP    10.118.90.5:60832      107.167.96.43:443      ESTABLISHED     4684\r\n  TCP    10.118.90.5:60834      23.195.37.150:443      ESTABLISHED     4684\r\n  TCP    10.118.90.5:60837      18.97.36.55:443        ESTABLISHED     4684\r\n  TCP    10.118.90.5:60839      140.82.112.21:443      ESTABLISHED     3916\r\n  TCP    10.118.90.5:60852      169.254.169.254:80     SYN_SENT        22176\r\n  TCP    10.118.90.5:60853      169.254.169.254:80     SYN_SENT        22176\r\n  TCP    10.118.90.5:60855      169.254.169.254:80     SYN_SENT        22176\r\n  TCP    10.118.90.5:60856      169.254.169.254:80     SYN_SENT        22176\r\n  TCP    10.118.90.5:60857      169.254.169.254:80     SYN_SENT        22176\r\n  TCP    10.118.90.5:60858      169.254.169.254:80     SYN_SENT        22176\r\n  TCP    10.118.90.5:60859      169.254.169.254:80     SYN_SENT        22176\r\n  TCP    10.118.90.5:60860      169.254.169.254:80     SYN_SENT        22176\r\n  TCP    10.118.90.5:62201      192.178.218.188:5228   ESTABLISHED     4684\r\n  TCP    10.118.90.5:62203      172.64.145.100:443     ESTABLISHED     4684\r\n  TCP    10.118.90.5:65113      13.223.19.204:443      ESTABLISHED     4408\r\n  TCP    127.0.0.1:52525        0.0.0.0:0              LISTENING       26504\r\n  TCP    127.0.0.1:60854        127.0.0.1:9229         SYN_SENT        1264\r\n  TCP    127.0.0.1:65111        127.0.0.1:65112        ESTABLISHED     4408\r\n  TCP    127.0.0.1:65112        127.0.0.1:65111        ESTABLISHED     4408\r\n  TCP    [::]:135               [::]:0                 LISTENING       1232\r\n  TCP    [::]:445               [::]:0                 LISTENING       4\r\n  TCP    [::]:3000              [::]:0                 LISTENING       19304\r\n  TCP    [::]:49664             [::]:0                 LISTENING       584\r\n  TCP    [::]:49665             [::]:0                 LISTENING       904\r\n  TCP    [::]:49666             [::]:0                 LISTENING       2268\r\n  TCP    [::]:49667             [::]:0                 LISTENING       2704\r\n  TCP    [::]:49668             [::]:0                 LISTENING       3796\r\n  TCP    [::]:49669             [::]:0                 LISTENING       536\r\n  TCP    [::1]:3000             [::1]:60791            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60792            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60793            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60794            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60800            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60802            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60826            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60827            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60828            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60829            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60830            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60831            TIME_WAIT       0\r\n  TCP    [::1]:3000             [::1]:60861            ESTABLISHED     19304\r\n  TCP    [::1]:42050            [::]:0                 LISTENING       25988\r\n  TCP    [::1]:60861            [::1]:3000             ESTABLISHED     4684\r\n  UDP    0.0.0.0:5050           *:*                                    940\r\n  UDP    0.0.0.0:5353           *:*                                    4684\r\n  UDP    0.0.0.0:5353           *:*                                    2364\r\n  UDP    0.0.0.0:5353           *:*                                    4684\r\n  UDP    0.0.0.0:5353           *:*                                    1264\r\n  UDP    0.0.0.0:5353           *:*                                    1264\r\n  UDP    0.0.0.0:5355           *:*                                    2364\r\n  UDP    0.0.0.0:50074          *:*                                    9780\r\n  UDP    0.0.0.0:50080          *:*                                    6212\r\n  UDP    0.0.0.0:51879          52.96.38.82:443                        21884\r\n  UDP    0.0.0.0:52586          *:*                                    2364\r\n  UDP    0.0.0.0:55586          *:*                                    6212\r\n  UDP    0.0.0.0:60606          *:*                                    2364\r\n  UDP    0.0.0.0:63708          172.253.62.95:443                      4684\r\n  UDP    10.118.90.5:137        *:*                                    4\r\n  UDP    10.118.90.5:138        *:*                                    4\r\n  UDP    10.118.90.5:1900       *:*                                    8328\r\n  UDP    10.118.90.5:2177       *:*                                    1844\r\n  UDP    10.118.90.5:63909      *:*                                    8328\r\n  UDP    127.0.0.1:1900         *:*                                    8328\r\n  UDP    127.0.0.1:49664        127.0.0.1:49664                        4280\r\n  UDP    127.0.0.1:61692        127.0.0.1:61692                        796\r\n  UDP    127.0.0.1:63908        *:*                                    8328\r\n  UDP    [::]:5353              *:*                                    2364\r\n  UDP    [::]:5353              *:*                                    4684\r\n  UDP    [::]:5353              *:*                                    1264\r\n  UDP    [::]:5355              *:*                                    2364\r\n  UDP    [::]:50074             *:*                                    9780\r\n  UDP    [::]:50080             *:*                                    6212\r\n  UDP    [::]:52586             *:*                                    2364\r\n  UDP    [::]:55586             *:*                                    6212\r\n  UDP    [::]:60606             *:*                                    2364\r\n  UDP    [::1]:1900             *:*                                    8328\r\n  UDP    [::1]:63906            *:*                                    8328\r\n  UDP    [fe80::6b32:dbdf:5657:8772%3]:1900  *:*                                    8328\r\n  UDP    [fe80::6b32:dbdf:5657:8772%3]:2177  *:*                                    1844\r\n  UDP    [fe80::6b32:dbdf:5657:8772%3]:63907  *:*                                    8328\r\n"
+    }
+]

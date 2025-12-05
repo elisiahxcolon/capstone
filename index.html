@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#Scan">Scan</a>
+            <a href="#MachineLearning">Machine Learning</a>
+            <a href="#Implementation">Implementation</a>
+            <a href="#Former">Former Implementation</a>
+            <a href="#Network">Network Familiarity</a>
+        </nav>
+    </header>
+
+   <section id="Scan">
+    <h2>Local Network Configuration</h2>
+
+    <form id="scanForm">
+        <label>
+            Full Name:<br>
+            <input type="text" id="fullName" required>
+        </label>
+        <br><br>
+
+        <label>
+            Reason for Using Scanner:<br>
+            <textarea id="reason" rows="4" required></textarea>
+        </label>
+        <br><br>
+
+        <button type="button" id="scanBtn">Run Scanner</button>
+    </form>
+
+    <div id="status" style="margin-top: 20px; font-weight: bold;"></div>
+    <div id="results" style="margin-top: 10px;"></div>
+</section>
+
+
+    <section>
+        <h1>Meet the Team</h1>
+
+        <div class="team-container">
+            <p class="team-card">
+                <strong>Team Member:</strong> Elisiah Colon<br>
+                <img src="elisiah.jpg" alt="Elisiah Colon" width="200"><br>
+                Elisiah is a dedicated and passionate individual with a strong interest in technology and networking.
+                He is currently pursuing a degree in Computer Science and is eager to apply his knowledge in real-world scenarios.
+                Elisiah is currently interning at the <strong>National Veterans Legal Services Program</strong> as a Junior Systems Administrator!
+            </p>
+
+            <p class="team-card">
+                <strong>Team Member:</strong> Yiunno-Amlak Felleke<br>
+                <img src="yiunno.jpg" alt="Yiunno-Amlak Felleke" width="200"><br>
+                Yiunno is a highly motivated individual with a keen interest in cybersecurity and network management.
+                He is pursuing a degree in Information Technology and is excited to contribute to innovative projects.
+                Yiunno is currently working at the <strong>National Cybersecurity Center</strong> as a Security Analyst Intern.
+            </p>
+        </div>
+    </section>
+
+<section id="MachineLearning">
+    <h2>Machine Learning</h2>
+
+    <p>
+        The backend component of our network-security capstone project merges a simulated router and a neural
+        network-based anomaly detection model to create intelligence for our project. By synthesizing the data
+        produced by the simulated router on several aspects of network device activity—open ports, latency,
+        response consistency, traffic load, and device types—we avoid scanning real networks and instead generate
+        controlled test cases for development. This simulated data is processed through a feature-extraction
+        pipeline and converted into numerical vectors suitable for machine-learning models. A TensorFlow/Keras
+        neural network has been trained on these vectors to identify normal, risky, or harmful network configurations.
+
+        After training, the model can analyze newly generated simulated router data and produce an anomaly score
+        along with a classification of whether the router is behaving normally. The anomaly score helps determine
+        device risk, while the classification guides the scanner toward identifying up-to-date security threats.
+        This component provides an authentic testing environment and a smart anomaly-detection capability.
+
+        Currently, this tool is only for educational and exploratory use and does not connect directly to the
+        scanner. It demonstrates how network attributes become machine-learning features and how a neural network
+        learns to classify simulated network configurations. This prototype system introduces students to data
+        preprocessing, supervised learning, anomaly detection, and the connection between configuration and
+        security risk. As it expands, it will support deeper cybersecurity learning and the development of
+        intelligent computational tools.
+    </p>
+
+    <div class="ml-images">
+        <img src="m1.png" alt="ML Image 1">
+        <img src="m2.png" alt="ML Image 2">
+    </div>
+</section>
+
+<section id="Implementation">
+    <h3>Implementation</h3>
+    <p>
+        <strong>Web-Based Network Information Tool</strong><br>
+        This project was developed as part of a broader hands-on networking and systems
+        research environment. Alongside the web application, a dedicated
+        <strong>Windows Server 2025</strong> instance was deployed on a separate laptop
+        to simulate a realistic enterprise setup. The server was fully configured with
+        <strong>Active Directory Domain Services</strong>, <strong>DNS</strong>, and
+        <strong>DHCP scopes</strong> to support domain operations and provide a controlled
+        platform for testing how client devices obtain and report network configuration details.
+        The intention was to create a structured environment for studying fundamental network
+        behaviors and designing a lightweight, web-based information tool.
+    </p>
+
+    <p><strong>Front-End (Client-Side)</strong></p>
+    <p>
+        The front end is built with <strong>HTML, CSS, and JavaScript</strong>. The interface collects:
+    </p>
+    <ul>
+        <li>The user's full name.</li>
+        <li>A brief explanation of why the tool is being used.</li>
+    </ul>
+
+    <p>
+        After input validation, the browser sends a structured JSON request to the backend:
+    </p>
+    <pre><code>POST http://localhost:3000/scan-self
+{
+    "fullName": "...",
+    "reason": "..."
+}</code></pre>
+
+    <p>
+        Once the response is received, the interface displays key network information from the
+        local machine, such as:
+    </p>
+    <ul>
+        <li>IPv4 address</li>
+        <li>Default gateway</li>
+        <li>DNS server assignment</li>
+        <li>MAC address</li>
+        <li>DHCP configuration status</li>
+    </ul>
+
+    <p><strong>Back-End (Server-Side)</strong></p>
+    <p>
+        The backend is implemented using <strong>Node.js</strong> with the <strong>Express</strong> framework.
+        It processes incoming requests, executes controlled system-level commands, and returns
+        parsed network information to the browser. All activity is logged to maintain clarity,
+        traceability, and responsible usage.
+    </p>
+
+    <ul>
+        <li><code>express</code> — provides routing and static file delivery.</li>
+        <li><code>cors</code> — manages browser communication.</li>
+        <li><code>child_process.exec</code> — retrieves local network details through system commands.</li>
+        <li><code>fs</code> — stores detailed request logs in <code>logs.json</code>.</li>
+    </ul>
+
+    <p><strong><code>POST /scan-self</code></strong></p>
+    <p>
+        This endpoint ensures all fields are present, processes the system output, extracts
+        relevant values, and logs a complete entry in the audit file:
+    </p>
+
+    <pre><code>{
+    fullName: "...",
+    reason: "...",
+    timestamp: "...",
+    networkDetails: {
+        ipv4: "...",
+        gateway: "...",
+        dns: "...",
+        mac: "...",
+        dhcp: "..."
+    }
+}</code></pre>
+
+    <p>
+        These logs create a clear, maintainable record of usage while ensuring all operations
+        stay fully local and do not interact with or scan external systems.
+    </p>
+
+    <p><strong>Educational & Research Value</strong></p>
+    <p>
+        The combination of a configured Windows Server 2025 environment and this browser-based
+        tool provided a structured platform for exploring how clients receive network assignments,
+        how directory services behave, and how system-level networking data can be safely
+        extracted and visualized. The goal was to design a small-scale prototype inspired by
+        real administrative tools—focusing on clarity, accountability, and controlled behavior.
+    </p>
+</section>
+
+<section id="Former">
+    <h4>Former Implementation</h4>
+    <p>
+        <strong>Network Scanner Overview</strong><br><br>
+
+        <strong>Development & Environment:</strong><br>
+        The <em>Network Scanner (NS)</em> was developed entirely in <strong>Python</strong> and tested on a <strong>home router</strong> to simulate real-world network environments.<br>
+        A simple <strong>PyGame interface</strong> was used to provide a graphical UI for displaying network information.<br>
+        The implementation was functional but limited in versatility, focusing mainly on local discovery and basic scanning capabilities.<br><br>
+
+        <strong>Core Functionalities:</strong><br>
+        - <code>get_public_ip()</code> – Retrieves the public IP address.<br>
+        - <code>get_local_ip()</code> – Detects the local IP assigned by the router.<br>
+        - <code>scan_ports(ip, ports)</code> – Scans ports and reports open/closed status.<br>
+        - <code>arp_scan_fallback()</code> – Uses the ARP table to detect local devices.<br>
+        - <code>measure_download_speed()</code> – Estimates download speed.<br><br>
+
+        <strong>Tools & Libraries:</strong><br>
+        Written and tested in <strong>PyCharm</strong> using <code>socket</code>, <code>subprocess</code>, and <code>requests</code>.<br>
+        These provided lightweight alternatives to tools like <strong>Nmap</strong> and <strong>Wireshark</strong>.<br><br>
+
+        <strong>Future Goals:</strong><br>
+        - Move UI from PyGame to web.<br>
+        - Increase compatibility and integrate stronger APIs.<br><br>
+    </p>
+
+    <div style="display: flex; justify-content: center; gap: 40px; margin-top: 20px;">
+        <img src="pygamelogo.png" alt="PyGame Logo" width="200">
+        <img src="pycharmlogo.png" alt="PyCharm Logo" width="200">
+    </div>
+</section>
+
+<section id="Network">
+    <h5>Network Familiarity</h5>
+
+    <p>
+        <strong>Windows Server:</strong><br>
+        Windows Server manages users, computers, and resources in enterprise environments.
+        It provides a safe testing ground for domain networking.
+    </p>
+    <div style="text-align:center;">
+        <img src="windowsserver.png" alt="Windows Server Image" width="300">
+    </div>
+    <br><br>
+
+    <p>
+        <strong>DHCP (Dynamic Host Configuration Protocol):</strong><br>
+        Assigns IP addresses automatically, preventing conflicts and saving time.
+    </p>
+    <div style="text-align:center;">
+        <img src="dhcp.png" alt="DHCP Image" width="300">
+    </div>
+    <br><br>
+
+    <p>
+        <strong>DHCP Scope:</strong><br>
+        Defines the range of IP addresses a server can assign.
+    </p>
+    <div style="text-align:center;">
+        <img src="dhcpscope.webp" alt="DHCP Scope Image" width="300">
+    </div>
+    <br><br>
+
+    <p>
+        <strong>DNS (Domain Name System):</strong><br>
+        Converts names into IP addresses and is required for Active Directory to function.
+    </p>
+    <div style="text-align:center;">
+        <img src="dns.jpeg" alt="DNS Image" width="300">
+    </div>
+    <br><br>
+
+    <p>
+        <strong>Active Directory (AD):</strong><br>
+        Manages users, authentication, and permissions for enterprise networks.
+    </p>
+    <div style="text-align:center;">
+        <img src="active.png" alt="Active Directory Image" width="300">
+    </div>
+    <br><br>
+
+    <p>
+        <strong>IP Address:</strong><br>
+        A unique identifier allowing devices to communicate.
+    </p>
+    <div style="text-align:center;">
+        <img src="ip.webp" alt="IP Address Image" width="300">
+    </div>
+    <br><br>
+
+    <p>
+        <strong>ISO:</strong><br>
+        A disk image used to install operating systems or create VMs.
+    </p>
+    <div style="text-align:center;">
+        <img src="iso.png" alt="ISO Image" width="300">
+    </div>
+    <br><br>
+
+    <p>
+        <strong>Firewall:</strong><br>
+        Controls allowed and blocked network traffic.
+    </p>
+    <div style="text-align:center;">
+        <img src="firewall.png" alt="Firewall Image" width="300">
+    </div>
+    <br><br>
+
+    <p>
+        <strong>Relevance:</strong><br>
+        This environment builds real-world networking and server administration skills.
+    </p>
+</section>
+
+</body>
+</html>
